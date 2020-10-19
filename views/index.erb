@@ -1,0 +1,11 @@
+<!-- https://github.com/lewagon/sinatra-101 -->
+
+<ul>
+  <% @recipes.each.with_index do |recipe, index| %>
+  <li>
+    <a href="https://www.allrecipes.com<%= recipe.path %>"><%= recipe.name %></a> [<a href="/remove<%= '?idx=' + index.to_s %>">X</a>]
+  </li>
+  <% end %>
+</ul>
+
+<a href="/new">Add Recipe</ax>
